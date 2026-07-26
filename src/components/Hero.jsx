@@ -46,7 +46,7 @@ export default function Hero() {
       {/* Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:35px_35px] -z-10" />
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10 py-20 lg:py-0">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10 pt-20 pb-10 md:pb-0 lg:py-0">
         {/* Left */}
         <div className="text-center md:text-left order-2 md:order-1">
           <p className="text-xs md:text-sm uppercase tracking-widest text-green-400 mb-4">

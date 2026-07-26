@@ -26,7 +26,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-24 bg-gradient-to-b from-black via-[#050806] to-black text-white overflow-hidden"
+      className="relative py-10 lg:py-24 bg-gradient-to-b from-black via-[#050806] to-black text-white overflow-hidden"
     >
       {/* Background Glow */}
       <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-[#95BF47]/20 blur-[180px]" />

@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-24 bg-gradient-to-b from-black via-[#050806] to-black text-white overflow-hidden"
+      className="relative py-10 md:py-24 bg-gradient-to-b from-black via-[#050806] to-black text-white overflow-hidden"
     >
       {/* Background Glow */}
       <div className="absolute w-[550px] h-[550px] bg-[#95BF47]/15 blur-[200px] rounded-full -top-32 -left-32"></div>

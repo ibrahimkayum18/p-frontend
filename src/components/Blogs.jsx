@@ -37,7 +37,7 @@ export default function Blogs() {
   return (
     <section
       id="blogs"
-      className="relative py-24 bg-gradient-to-b from-black via-[#050806] to-black text-white overflow-hidden"
+      className="relative py-10 md:py-24 bg-gradient-to-b from-black via-[#050806] to-black text-white overflow-hidden"
     >
       {/* Background Glow */}
       <div className="absolute -top-32 left-0 w-[500px] h-[500px] rounded-full bg-[#95BF47]/15 blur-[180px]" />

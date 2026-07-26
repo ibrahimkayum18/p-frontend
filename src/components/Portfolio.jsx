@@ -106,7 +106,7 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="relative py-24 bg-gradient-to-b from-black via-[#050806] to-black text-white overflow-hidden"
+      className="relative py-10 md:py-24 bg-gradient-to-b from-black via-[#050806] to-black text-white overflow-hidden"
     >
       {/* Glow */}
       <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-[#95BF47]/10 blur-[180px] rounded-full"></div>

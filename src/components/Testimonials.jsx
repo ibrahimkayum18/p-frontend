@@ -2,7 +2,7 @@ import { testimonials } from "../data/data";
 
 export default function Testimonials() {
   return (
-    <section className="relative py-24 bg-gradient-to-b from-black via-[#050806] to-black text-white overflow-hidden">
+    <section className="relative py-10 md:py-24 bg-gradient-to-b from-black via-[#050806] to-black text-white overflow-hidden">
       {/* Background Glow */}
       <div className="absolute -top-20 left-0 w-[500px] h-[500px] bg-[#95BF47]/15 blur-[180px] rounded-full"></div>
 

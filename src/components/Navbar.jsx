@@ -18,11 +18,11 @@ export default function Navbar() {
           
           {/* Logo */}
           <a
-            href="#home"
-            className="text-white font-bold text-lg md:text-xl tracking-wide"
-          >
-            IBRAHIM KAYUM
-          </a>
+  href="#home"
+  className="text-lg md:text-xl font-bold tracking-wide bg-gradient-to-r from-[#95BF47] via-emerald-400 to-green-300 bg-clip-text text-transparent"
+>
+  IBRAHIM KAYUM
+</a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 text-sm text-gray-300">
@@ -48,7 +48,7 @@ export default function Navbar() {
           {/* Mobile Button */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-white text-2xl"
+            className="md:hidden text-2xl tracking-wide bg-gradient-to-r from-[#95BF47] via-emerald-400 to-green-300 bg-clip-text text-transparent"
           >
             {open ? "✕" : "☰"}
           </button>
@@ -72,7 +72,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="mt-2 bg-gradient-to-r from-purple-600 to-pink-500 px-5 py-3 rounded-full text-center text-white font-medium"
+                className="mt-2 bg-gradient-to-r from-[#95BF47] to-[#5E8E3E] px-5 py-3 rounded-full text-center text-white font-medium"
               >
                 Book Free Audit
               </a>

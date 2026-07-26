@@ -56,7 +56,7 @@ export default function Contact() {
   return (
     <section
   id="contact"
-  className="relative py-24 bg-gradient-to-b from-black via-[#07110A] to-black text-white overflow-hidden"
+  className="relative py-10 md:py-24 bg-gradient-to-b from-black via-[#07110A] to-black text-white overflow-hidden"
 >
   {/* Background Glow */}
   <div className="absolute -top-24 -left-24 w-[450px] h-[450px] bg-[#95BF47]/15 blur-[180px] rounded-full"></div>
