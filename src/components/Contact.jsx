@@ -1,64 +1,98 @@
-export default function Contact() {
-  return (
-    <section
-      id="contact"
-      className="relative py-28 bg-gradient-to-b from-black via-[#0f0f0f] to-black text-white overflow-hidden"
-    >
-      {/* Background Glow */}
-      <div className="absolute w-[500px] h-[500px] bg-[#663399] opacity-20 blur-[200px] rounded-full top-0 right-0"></div>
-      <div className="absolute w-[400px] h-[400px] bg-purple-600 opacity-20 blur-[180px] rounded-full bottom-0 left-0"></div>
+import { useState } from "react";
 
-      <div className="container mx-auto px-6 relative z-10 max-w-xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [responseMsg, setResponseMsg] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setResponseMsg("");
+
+    try {
+      const res = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setResponseMsg("✅ Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setResponseMsg("❌ " + data.message);
+      }
+    } catch (error) {
+      setResponseMsg("❌ Server error");
+    }
+
+    setLoading(false);
+  };
+
+  return (
+    <section id="contact" className="py-28 bg-black text-white">
+      <div className="max-w-xl mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center mb-8">
           Get in <span className="text-[#663399]">Touch</span>
         </h2>
-        <p className="text-gray-400 text-center mb-12">
-          Have a Shopify project in mind? Fill out the form below and I’ll get
-          back to you as soon as possible.
-        </p>
 
-        <form className="space-y-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 shadow-lg">
-          {/* Name */}
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full p-4 border border-white/20 rounded-xl bg-transparent text-white placeholder-transparent focus:outline-none focus:border-[#663399] peer transition"
-            />
-            <label className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-[#663399] peer-focus:text-sm">
-              Name
-            </label>
-          </div>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Name"
+            className="w-full p-4 bg-transparent border rounded"
+          />
 
-          {/* Email */}
-          <div className="relative">
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full p-4 border border-white/20 rounded-xl bg-transparent text-white placeholder-transparent focus:outline-none focus:border-[#663399] peer transition"
-            />
-            <label className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-[#663399] peer-focus:text-sm">
-              Email
-            </label>
-          </div>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email"
+            className="w-full p-4 bg-transparent border rounded"
+          />
 
-          {/* Message */}
-          <div className="relative">
-            <textarea
-              rows="4"
-              placeholder="Message"
-              className="w-full p-4 border border-white/20 rounded-xl bg-transparent text-white placeholder-transparent focus:outline-none focus:border-[#663399] peer transition"
-            ></textarea>
-            <label className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-[#663399] peer-focus:text-sm">
-              Message
-            </label>
-          </div>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Message"
+            className="w-full p-4 bg-transparent border rounded"
+          />
 
-          {/* Submit */}
-          <button className="w-full bg-[#663399] hover:bg-purple-700 text-white font-semibold py-3 rounded-xl shadow-lg transition">
-            Send Message
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-[#663399] py-3 rounded"
+          >
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
+
+        {/* Response Message */}
+        {responseMsg && (
+          <p className="mt-4 text-center">{responseMsg}</p>
+        )}
       </div>
     </section>
   );

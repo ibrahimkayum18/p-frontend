@@ -2,45 +2,66 @@ import { testimonials } from "../data/data";
 
 export default function Testimonials() {
   return (
-    <section className="relative py-28 bg-gradient-to-b from-black via-[#0f0f0f] to-black text-white overflow-hidden">
-      {/* Glow Accent */}
-      <div className="absolute w-[500px] h-[500px] bg-[#663399] opacity-20 blur-[220px] rounded-full -top-20 left-0"></div>
+    <section className="relative py-24 bg-gradient-to-b from-black via-[#050806] to-black text-white overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute -top-20 left-0 w-[500px] h-[500px] bg-[#95BF47]/15 blur-[180px] rounded-full"></div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-emerald-500/10 blur-[180px] rounded-full"></div>
+
+      {/* Grid Background */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:35px_35px]" />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Heading */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Client <span className="text-[#663399]">Testimonials</span>
+        <div className="text-center mb-16">
+          <p className="uppercase tracking-[4px] text-[#95BF47] text-sm font-semibold mb-4">
+            Testimonials
+          </p>
+
+          <h2 className="text-4xl md:text-6xl font-bold">
+            What My{" "}
+            <span className="bg-gradient-to-r from-[#95BF47] via-emerald-400 to-green-300 bg-clip-text text-transparent">
+              Clients Say
+            </span>
           </h2>
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            Real feedback from Shopify brands I've helped optimize and scale.
+
+          <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-lg">
+            Real reviews from Shopify store owners I've helped with store
+            development, optimization, and conversion rate improvements.
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+        {/* Testimonials */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 transition-all duration-500 hover:-translate-y-3 hover:border-[#663399]"
+              className="group h-full flex flex-col rounded-3xl border border-green-500/20 bg-[#0d0d0d]/90 backdrop-blur-xl p-8 transition-all duration-500 hover:-translate-y-2 hover:border-[#95BF47] hover:shadow-[0_0_35px_rgba(149,191,71,0.18)]"
             >
-              {/* Big Quote */}
-              <div className="text-[#663399] text-5xl font-bold mb-6 leading-none">
-                “
+              {/* Quote */}
+              <div className="text-6xl text-[#95BF47] leading-none mb-6">
+                "
               </div>
 
-              <p className="text-gray-300 text-sm leading-relaxed mb-6">
+              {/* Review */}
+              <p className="text-gray-300 leading-8 flex-grow">
                 {t.text}
               </p>
 
               {/* Stars */}
-              <div className="flex mb-4 text-[#663399]">★★★★★</div>
+              <div className="flex text-[#95BF47] text-xl mt-8 mb-6">
+                ★★★★★
+              </div>
 
-              <div className="border-t border-white/10 pt-4">
-                <p className="font-semibold group-hover:text-[#663399] transition">
+              {/* Footer */}
+              <div className="border-t border-green-500/10 pt-5">
+                <h3 className="font-semibold text-lg group-hover:text-[#95BF47] transition-colors">
                   {t.name}
+                </h3>
+
+                <p className="text-gray-500 text-sm mt-1">
+                  Shopify Store Owner
                 </p>
-                <p className="text-gray-500 text-sm">Shopify Brand Owner</p>
               </div>
             </div>
           ))}
