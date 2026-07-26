@@ -21,7 +21,7 @@ export default function Navbar() {
             href="#home"
             className="text-white font-bold text-lg md:text-xl tracking-wide"
           >
-            Ibrahim Kayum
+            IBRAHIM KAYUM
           </a>
 
           {/* Desktop Menu */}
@@ -39,7 +39,7 @@ export default function Navbar() {
             {/* CTA */}
             <a
               href="#contact"
-              className="ml-2 bg-gradient-to-r from-purple-600 to-pink-500 px-5 py-2 rounded-full text-white font-medium hover:scale-105 transition"
+              className="ml-2 bg-gradient-to-r from-[#95BF47] to-[#5E8E3E] px-5 py-2 rounded-full text-white font-medium hover:scale-105 transition"
             >
               Book Audit
             </a>
