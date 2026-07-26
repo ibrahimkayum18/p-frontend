@@ -49,17 +49,17 @@ export const blogs = [
 export const testimonials = [
   {
     id: 1,
-    name: "US Fashion Brand",
+    name: "Bedmode",
     text: "Ibrahim completely transformed our Shopify store. Sales increased within 2 weeks!",
   },
   {
     id: 2,
-    name: "UK Beauty Store",
+    name: "Hyygia",
     text: "Professional, strategic, and deeply focused on conversions.",
   },
   {
     id: 3,
-    name: "CA Fitness Brand",
+    name: "Piedrasar",
     text: "Best Shopify CRO expert we’ve worked with.",
   },
 ];

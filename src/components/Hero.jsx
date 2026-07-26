@@ -113,7 +113,7 @@ export default function Hero() {
   </a>
 
   <a
-    href="https://wa.me/8801XXXXXXXXX"
+    href="https://wa.me/+8801609640106"
     target="_blank"
     rel="noopener noreferrer"
     className="w-11 h-11 flex items-center justify-center rounded-full border border-green-500/30 text-green-400 hover:bg-green-500 hover:text-black transition-all duration-300 hover:scale-110"
@@ -122,7 +122,7 @@ export default function Hero() {
   </a>
 
   <a
-    href="mailto:your@email.com"
+    href="mailto:smibrahimkayum@email.com"
     className="w-11 h-11 flex items-center justify-center rounded-full border border-green-500/30 text-green-400 hover:bg-green-500 hover:text-black transition-all duration-300 hover:scale-110"
   >
     <MdEmail size={22} />

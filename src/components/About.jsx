@@ -114,7 +114,7 @@ export default function About() {
               </a>
 
               <a
-                href="#projects"
+                href="#portfolio"
                 className="w-full sm:w-auto text-center border border-green-500/30 px-8 py-3 rounded-full hover:bg-[#95BF47] hover:text-black transition-all duration-300"
               >
                 View Case Studies
