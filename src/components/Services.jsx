@@ -5,21 +5,21 @@ export default function Services() {
       image:
         "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=900&auto=format&fit=crop&q=80",
       desc: "Launch a beautiful, responsive, and high-converting Shopify store tailored to your brand and business goals.",
-      link: "https://www.fiverr.com/YOUR_FIRST_GIG",
+      link: "https://www.fiverr.com/s/EgWjdD9",
     },
     {
       title: "Shopify Bug Fixing",
       image:
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&auto=format&fit=crop&q=80",
       desc: "Fix Liquid errors, responsive issues, app conflicts, speed problems, and any Shopify bugs quickly and professionally.",
-      link: "https://www.fiverr.com/YOUR_SECOND_GIG",
+      link: "https://www.fiverr.com/s/gDRoN3o",
     },
     {
       title: "Shopify CRO & Store Improvement",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=80",
       desc: "Increase conversions by improving your existing Shopify store with better UX, faster performance, and CRO strategies.",
-      link: "https://www.fiverr.com/YOUR_THIRD_GIG",
+      link: "https://www.fiverr.com/s/EgWjdD9",
     },
   ];
 

@@ -30,7 +30,7 @@ export default function Contact() {
     setResponseMsg("");
 
     try {
-      const res = await fetch("https://portfolio-backend-5fkq.onrender.com/contact", {
+      const res = await fetch("https://portfolio-backend-eight-weld.vercel.app/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
